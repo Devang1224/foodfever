@@ -42,6 +42,3 @@ mongoose.connect(URL,{ useNewUrlParser: true}
 
 
 
-
-// /users/devangmehra/mongodb/bin/mongod --dbpath=/users/devangmehra/mongodb-data
-// mongodb+srv://devang12:devang12@cluster0.1yrnmhk.mongodb.net/zomato_60
