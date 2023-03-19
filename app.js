@@ -24,7 +24,7 @@ app.use('/menu',menuRoutes)
 app.use('/payment',paymentRoutes)
 app.use('/register',registerRoutes)
 
-
+const PORT = 9098 || 6010;
 
 
 
@@ -32,7 +32,7 @@ app.use('/register',registerRoutes)
 mongoose.connect(URL,{ useNewUrlParser: true}
 ).then(client => {
     // starting the server using the listen function
-    app.listen(9098, () => {
+    app.listen(PORT, () => {
         console.log(`Server running at 9098`)
     });
 }).catch(err => {
