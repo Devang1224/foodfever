@@ -6,7 +6,7 @@ const cors = require('cors')
 const routes = require('./routes/restaurants') 
 const locationRoutes = require('./routes/location')
 const mealTypeRoutes = require('./routes/mealtype')
-const menuRoutes = require('../Backend/routes/menu')
+const menuRoutes = require('./routes/menu')
 const paymentRoutes = require('./routes/payment')
 const registerRoutes = require('./routes/register')
 
