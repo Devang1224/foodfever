@@ -36,6 +36,7 @@ mongoose.connect(URL,{ useNewUrlParser: true}
         console.log(`Server running at ${process.env.PORT}`)
     });
 }).catch(err => {
+
     console.log(err);
 })
 
