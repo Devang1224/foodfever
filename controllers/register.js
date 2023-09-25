@@ -21,11 +21,9 @@ Register.find(findUser)
         
          regis.save().then((result)=>{
              res.status(200).json({
-                   message:"user registred successfully",
                    UserData:result,
-                   status:1
-
-                     })
+                    status:1
+                })
          }).catch((err)=>{
             res.status(500).json({
                 message:"data fetching failed",

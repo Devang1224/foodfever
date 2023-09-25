@@ -81,21 +81,34 @@ exports.restaurantDetails=(req,res)=>{
     })
 }
 
-exports.getRestaurantsByCity=(req,res)=>{
+exports.getRestaurantsByName = async (req, res) => {
 
 
+  const query = req.params.name;
 
-    restaurantdata.find({city:req.params.id}).then(
-        result=>res.status(200).json({
-            message:"restaurants fetched successfully",
-            data: result
-        })
-        ).catch(
-            error=>res.status(500).json({
-                message:"DB error occured",
-                error: error
-            })
-        )
-}
+  try {
+    const result = await restaurantdata.find({
+      name: { $regex: query, $options: "i" },
+    }).limit(6);
+
+    if (!result.length) {
+      res.status(404).json({
+        data:[],
+        error:"not found"
+      });
+    } else {
+      res.status(200).json({
+        message: "restaurants fetched successfully",
+        data: result,
+        error:""
+      });
+    }
+  } catch (err) {
+    res.status(500).json({
+      message: "DB error occured",
+      error: err,
+    });
+  }
+};
 
 

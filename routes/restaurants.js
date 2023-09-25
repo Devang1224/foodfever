@@ -12,6 +12,6 @@ const router = express.Router();
 
 router.post('/filter/:pageNo',city.location)
 router.get('/restaurantDetails/:name',city.restaurantDetails)
-router.get('/restaurants/city/:id',city.getRestaurantsByCity)
+router.get('/restaurants/city/:name',city.getRestaurantsByName)
 
 module.exports = router;

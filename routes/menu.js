@@ -11,4 +11,6 @@ const router = express.Router();
 
 router.get('/:rName',MenuController.getAllMenu)
 
+
+
 module.exports = router;
