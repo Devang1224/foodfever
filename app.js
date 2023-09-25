@@ -33,7 +33,7 @@ mongoose.connect(URL,{ useNewUrlParser: true}
 ).then(client => {
     // starting the server using the listen function
     app.listen(process.env.PORT || 9098, () => {
-        console.log(`Server running at ${PORT}`)
+        console.log(`Server running at ${process.env.PORT}`)
     });
 }).catch(err => {
     console.log(err);
