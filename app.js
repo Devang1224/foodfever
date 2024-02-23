@@ -15,7 +15,9 @@ const app = express()
 const URL = process.env.MONGO_URL;
 
 app.use(bodyParser.json()); 
-app.use(cors())
+app.use(cors({
+    origin:"https://foodfever.netlify.app"
+}))
 
 app.use('/',routes)
 app.use('/location',locationRoutes)
