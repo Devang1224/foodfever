@@ -17,6 +17,7 @@ Register.find(findUser)
                 name:req.body.name,
                 email:req.body.email,
                 password:req.body.password
+                
                })
         
          regis.save().then((result)=>{
